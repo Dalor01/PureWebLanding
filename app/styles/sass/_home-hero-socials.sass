@@ -1,0 +1,30 @@
+.home-hero-socials
+    &__title
+        font-size: 35px
+        font-weight: 700
+        line-height: 70px
+        text-transform: uppercase
+    &__wrapper
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+    &__wrapper img
+        width: 185px
+        height: 60px
+@include media-breakpoint-down(sm)
+    .home-hero-socials
+        &__wrapper
+            display: flex
+            flex-direction: column
+            justify-content: center
+        &__item--appStore
+            margin-bottom: 25px
+@include media-breakpoint-only(xs)
+    .home-hero-socials
+        &__title
+            font-weight: 700
+            font-size: 24px
+            line-height: 29px
+            margin-bottom: 35px
+        &__item--appStore
+            margin-bottom: 25px

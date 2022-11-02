@@ -1,0 +1,55 @@
+.header
+    &__top-line
+        display: flex
+        align-items: center
+        justify-content: flex-start
+    &__top-line-logo-text
+        margin-right: 150px
+    &__top-line-link
+        display: flex
+    &__top-line-link:hover
+        text-decoration-line: underline
+        text-underline-offset: 5px
+        text-decoration-thickness: 1px
+    &__top-line-link::after
+        content: ' '
+        display: inline-block
+        position: absolute
+        z-index: -1
+        top: -10px
+        height: 150px
+        width: 150px
+        background: transparent
+        filter: blur(35px)
+        transform: rotate(-105.26deg)
+        transition: background-color 1000ms linear
+    &__top-line-link:hover::after
+        background: rgba(96, 92, 234, 0.5)
+    &__top-line-link::before
+        background-image: url(../images/dist/header-link.svg)
+        content: ' '
+        height: 25px
+        width: 25px
+        background-position: center
+        background-repeat: no-repeat
+        margin-right: 15px
+        color: #fff
+@include media-breakpoint-down(sm)
+    .header
+        &__top-line
+            display: flex
+            justify-content: space-between
+@include media-breakpoint-only(xs)
+    .header
+        &__top-line
+            margin-top: 40px
+        &__top-line-logo
+            width: 52px
+            height: 52px
+        &__top-line-logo-text
+            width: 47px
+            height: 12px
+        &__top-line-link
+            font-size: 14px
+        &__top-line-link::before
+            display: none

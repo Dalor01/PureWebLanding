@@ -1,0 +1,31 @@
+.cookies-alert
+    background: #212834
+    padding: 20px
+    z-index: 999
+    position: fixed
+    bottom: 0
+    right: 0
+    width: 100%
+    display: none
+    &__btn
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px 40px
+        color: #fff
+        border: 0.5px solid #fff
+        border-radius: 6px
+        width: 130px
+        height: 100%
+        font-family: $userfontdescription
+    &__text
+        font-family: $userfontdescription
+        font-weight: 400
+        font-size: 14px
+        line-height: 19px
+@include media-breakpoint-up(lg)
+    .cookies-alert
+        &__btn
+            margin-left: 100px
+@include media-breakpoint-down(xs)
+    .cookies-alert
+        &__btn
+            height: 60px

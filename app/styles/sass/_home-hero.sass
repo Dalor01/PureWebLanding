@@ -1,0 +1,82 @@
+.home-hero
+    &__title
+        margin-top: 145px
+        position: relative
+        z-index: 1
+    &__description
+        position: relative
+        z-index: 1
+        display: flex
+        margin-top: 130px
+        font-size: 20px
+        line-height: 27px
+    &__description::before
+        content: ' '
+        margin-top: -50px
+        margin-right: -20px
+        height: 125px
+        min-width: 125px
+        background: rgba(96, 92, 234, 0.5)
+        filter: blur(50px)
+    &__description::after
+        content: ' '
+        position: absolute
+        left: -20px
+        bottom: 50px
+        min-width: 140px
+        border-bottom: 4px solid #fff
+        transform: rotate(120.61deg)
+    &__img
+        display: flex
+        justify-content: center
+        position: relative
+        z-index: 1
+        margin-top: -100px
+        display: block
+        width: 100%
+        height: 100%
+    &__img::before
+        content: ' '
+        display: inline-block
+        position: absolute
+        z-index: -1
+        top: -120px
+        right: -200px
+        height: 783px
+        width: 662px
+        background: rgba(250, 0, 255, 0.2)
+        filter: blur(125px)
+        transform: rotate(-105.26deg)
+@include media-breakpoint-only(xs)
+    .home-hero
+        &__description
+            font-weight: 400
+            font-size: 16px
+            line-height: 22px
+            margin-top: 24px
+        &__description::after
+            display: none
+        &__description::before
+            position: absolute
+            width: 74px
+            height: 74px
+            margin-top: -30px
+        &__img
+            position: relative
+            margin-top: 0px
+            height: 480px
+        &__img img
+            display: block
+            margin-right: -50px
+            height: 100%
+            width: auto
+        &__img::before
+            width: 360px
+            height: 430px
+            right: -100px
+            top: -60px
+            background: rgba(250, 0, 255, 0.5)
+    h1        
+        font-size: 35px
+        font-weight: 700
+        line-height: 40px

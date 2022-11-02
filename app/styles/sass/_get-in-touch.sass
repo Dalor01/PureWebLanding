@@ -1,0 +1,36 @@
+.get-in-touch
+    &__title
+        margin-bottom: 25px
+    &__title::before
+        content: ' '
+        position: absolute
+        margin-top: -80px
+        margin-left: -200px
+        min-height: 250px
+        min-width: 250px
+        background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%)
+        opacity: 0.3
+        filter: blur(125px)
+        transform: rotate(5.78deg)
+    &__description
+        margin-bottom: 80px
+    &__btn
+        width: 400px
+        height: 80px
+        background: #000
+        color: #fff
+        border: 1px solid #fff
+        border-radius: 10px
+        font-weight: 700
+        font-size: 24px
+        line-height: 29px
+@include media-breakpoint-down(sm)
+    .get-in-touch
+        &__title
+            @include title-mobile
+            margin-top: 95px
+        &__description
+            @include description-mobile
+            margin-bottom: 50px
+    br
+        display: none

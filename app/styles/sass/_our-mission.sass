@@ -1,0 +1,47 @@
+.our-mission
+    margin-top: 240px
+    &__img
+        margin-right: 500px
+        display: flex
+        justify-content: center
+    &__img img
+        max-width: 1000px
+    &__title
+        margin-bottom: 25px
+        margin-top: 0px
+    &__title::after
+        content: ' '
+        position: absolute
+        margin-top: -80px
+        margin-left: -80px
+        height: 85px
+        min-width: 85px
+        background: #F101BF
+        opacity: 0.7
+        filter: blur(50px)
+        z-index: -1
+    &__description
+        margin-top: 23px     
+@include media-breakpoint-down(md)
+    .our-mission
+        margin-top: 110px
+        &__img
+            margin-top: 200px
+            margin-right: 0
+        &__img img
+            width: 600px
+            height: 300px
+            transform: rotate(-90deg)
+        &__title::after
+            margin-top: -50px
+            margin-left: -250px
+        &__description
+            margin-bottom: 0px
+@include media-breakpoint-down(xs)
+    .our-mission
+        &__title
+            @include title-mobile
+        &__title br
+            display: none
+        &__description
+            @include description-mobile

@@ -1,0 +1,35 @@
+.qr-code
+    margin-top: 225px
+    &__wrapper
+        margin-top: -540px
+    &__bg
+        position: relative
+        display: block
+    &__bg img
+        width: 100%
+    &__bg::before
+        content: ' '
+        position: absolute
+        background: linear-gradient(179.83deg, #000000 -3.1%, rgba(0, 0, 0, 0) 56.76%, #000000 83.92%)
+        width: 100%
+        height: 100%
+    &__title
+        margin-bottom: 25px
+    &__description
+        margin-bottom: 60px
+    &__socials img
+        width: 185px
+        height: 60px
+    &__socials--appStore
+        margin-right: 25px
+    &__img
+        margin-right: -80px
+        margin-bottom: -300px
+@include media-breakpoint-down(md)
+    .qr-code
+        &__wrapper
+            margin-top: -250px
+        &__img
+            margin-right: 0px
+            margin-top: 0
+            margin-bottom: 0px

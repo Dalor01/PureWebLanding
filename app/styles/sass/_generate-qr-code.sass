@@ -1,0 +1,86 @@
+.generate-qr-code
+    margin-top: 470px
+    &__bg
+        width: 100%
+        z-index: -1
+    &__wrapper
+        margin-top: -500px
+    &__item
+        display: block
+        position: relative
+        z-index: 1
+    &__item::before
+        content: ' '
+        display: inline-block
+        position: absolute
+        top: -200px
+        right: -350px
+        z-index: -1
+        height: 1000px
+        width: 1000px
+        background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%)
+        opacity: 0.15
+        filter: blur(155.784px)
+        border-radius: 476.034px
+    &__bottom-text-wrapper
+        margin-top: 80px
+    &__item::after
+        content: ' '
+        position: absolute
+        width: 250px
+        height: 110px
+        top: 200px
+        left: 410px
+        background-image: url(../images/dist/generate-qr-code__arrow.svg)
+        background-repeat: no-repeat
+        rotate: (0deg)
+        z-index: 1
+@include media-breakpoint-only(lg)
+    .generate-qr-code
+        margin-top: 550px 
+@include media-breakpoint-only(md)
+    .generate-qr-code
+        margin-top: 400px 
+@include media-breakpoint-only(sm)
+    .generate-qr-code
+        margin-top: 300px
+        &__bottom-text-wrapper
+            margin-top: 130px
+        &__title
+            margin-bottom: 25px
+        &__description
+            margin-bottom: 70px
+        &__item::after
+            left: 300px
+            top: 600px
+            height: 140px
+            background-image: url(../images/dist/generate-qr-code-arrow__mobile.svg)
+    br
+        display: none
+@include media-breakpoint-only(xs)
+    .generate-qr-code
+        margin-top: 330px
+        &__item::before
+            height: 300px
+            width: 300px
+            top: 50px
+            right: -50px
+            opacity: 0.5
+        &__item::after
+            left: 150px
+            top: 350px
+            height: 140px
+            background-image: url(../images/dist/generate-qr-code-arrow__mobile.svg)
+        &__item img
+            width: 200px
+            height: 400px
+        &__bottom-text-wrapper
+            margin-top: 130px
+        &__title
+            @include title-mobile
+            margin-bottom: 25px
+        &__description
+            @include description-mobile
+            margin-bottom: 70px
+    br
+        display: none

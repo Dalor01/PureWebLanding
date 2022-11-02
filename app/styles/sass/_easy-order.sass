@@ -1,0 +1,29 @@
+.easy-order
+    margin-top: 200px
+    &__title
+        margin-bottom: 25px
+    &__title::after
+        content: ' '
+        position: absolute
+        margin-top: 200px
+        margin-left: -150px
+        min-height: 250px
+        min-width: 250px
+        background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%)
+        opacity: 0.5
+        filter: blur(125px)
+        transform: rotate(5.78deg)
+@include media-breakpoint-down(md)
+    .easy-order
+        &__item
+            margin-top: 75px
+        &__item img
+            width: 700px
+@include media-breakpoint-down(sm)
+    .easy-order
+        &__title
+            @include title-mobile
+        &__description
+            @include description-mobile
+        &__item-mobile
+            margin-top: 75px

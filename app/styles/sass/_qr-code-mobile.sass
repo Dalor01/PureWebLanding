@@ -1,0 +1,26 @@
+.qr-code-mobile
+    margin-top: 30px
+    &__wrapper
+        margin-top: -200px
+    &__bg
+        width: 100%
+    &__socials
+        margin-top: 50px
+    &__socials img
+        width: 185px
+        height: 60px
+    &__socials--appstore
+        margin-bottom: 25px
+    &__bottom-bg
+        width: 100%
+    &__bottom-wrapper
+        margin-top: -150px
+    &__mobile-item
+        margin-bottom: 50px
+@include media-breakpoint-only(xs)
+    .qr-code-mobile
+        &__title
+            @include title-mobile
+            margin-bottom: 24px
+        &__description
+            @include description-mobile

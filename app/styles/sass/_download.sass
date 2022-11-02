@@ -1,0 +1,53 @@
+.download
+    &__title
+        margin-top: 90px
+        margin-bottom: 32px
+    &__title::after
+        content: ' '
+        position: absolute
+        margin-top: -200px
+        margin-left: 200px
+        min-height: 250px
+        min-width: 250px
+        background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%)
+        opacity: 0.5
+        filter: blur(125px)
+        transform: rotate(5.78deg)
+    &__socials--appstore
+        width: 259px
+        height: 75px
+        margin-right: 30px
+    &__socials--playmarket
+        width: 259px
+        height: 81px
+        margin-left: 30px
+@include media-breakpoint-down(sm)
+    .download
+        &__title
+            font-weight: 700
+            font-size: 24px
+            line-height: 33px
+            letter-spacing: 0.03em
+        &__title::after
+            margin-left: 10px
+        &__socials--appstore
+            margin-right: 0px
+            margin-bottom: 24px
+            margin-top: 45px
+        &__socials--playmarket
+            margin-left: 0px
+            width: 240px
+@include media-breakpoint-down(xs)
+    .download
+        &__title
+            margin-top: 75px
+        &__socials--appstore
+            margin-right: 0px
+            margin-bottom: 24px
+            margin-top: 45px
+            width: 185px
+            height: 60px
+        &__socials--playmarket
+            margin-left: 0px
+            width: 185px
+            height: 60px

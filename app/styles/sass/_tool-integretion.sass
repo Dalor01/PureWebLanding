@@ -1,0 +1,21 @@
+.tool-integretion
+    margin-top: 300px
+    &__title
+        display: block
+        margin-bottom: 25px
+    &__item
+        margin-top: -100px
+@include media-breakpoint-down(md)
+    .tool-integretion
+        margin-top: 150px
+        &__item
+            margin-top: 0px
+            width: 100%
+@include media-breakpoint-down(xs)
+    .tool-integretion
+        &__item
+            margin-top: 30px
+        &__title
+            @include title-mobile
+        &__description
+            @include description-mobile
